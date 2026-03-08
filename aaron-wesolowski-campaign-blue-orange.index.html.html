@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Wesolowski for DC Board of Education - Ward 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        /* Header */
+        header {
+            background: #ffffff;
+            color: #1a1a1a;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            border-bottom: 3px solid #FF6B35;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 1.4em;
+            font-weight: 800;
+            color: #1e40af;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: color 0.3s;
+            letter-spacing: 0.3px;
+        }
+        
+        .nav-links a:hover {
+            color: #FF6B35;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 100px 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255,255,255,0.05);
+            transform: skewX(-15deg);
+            transform-origin: top;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+        
+        .hero h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+        
+        .hero .tagline {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 50px;
+            opacity: 0.95;
+            font-weight: 400;
+            max-width: 700px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #FF6B35;
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.15em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-button:hover {
+            background: #E55A28;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+        }
+        
+        .cta-button.secondary {
+            background: white;
+            color: #1e40af;
+            box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+        }
+        
+        .cta-button.secondary:hover {
+            background: #f0f9ff;
+            color: #1e40af;
+        }
+        
+        /* Credibility Banner */
+        .credibility-banner {
+            background: #FFF4ED;
+            border-left: 6px solid #FF6B35;
+            padding: 30px;
+            margin: -60px auto 0;
+            max-width: 1000px;
+            position: relative;
+            z-index: 10;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+        
+        .credibility-banner h3 {
+            color: #C2410C;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .credibility-banner p {
+            color: #9A3412;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+        
+        .credibility-banner a {
+            color: #C2410C;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid #FF6B35;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 90px 0;
+        }
+        
+        section h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #1e40af;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        
+        .section-intro {
+            font-size: 1.25em;
+            color: #4b5563;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.7;
+        }
+        
+        .section-alt {
+            background: #f8fafc;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .profile-photo {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e40af;
+            font-style: italic;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            font-size: 1.1em;
+            font-weight: 600;
+            border: 3px solid white;
+        }
+        
+        .bio p {
+            margin-bottom: 24px;
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #374151;
+        }
+        
+        .pull-quote {
+            background: linear-gradient(135deg, #FFF4ED 0%, #FFEDD5 100%);
+            border-left: 5px solid #FF6B35;
+            padding: 30px 40px;
+            margin: 35px 0;
+            font-size: 1.4em;
+            font-style: italic;
+            color: #C2410C;
+            font-weight: 600;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.15);
+        }
+        
+        /* Service Section */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .service-column h3 {
+            color: #1e40af;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            font-weight: 700;
+            border-bottom: 3px solid #FF6B35;
+            padding-bottom: 10px;
+        }
+        
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-list li {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #374151;
+        }
+        
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #FF6B35;
+            font-weight: 900;
+            font-size: 1.3em;
+        }
+        
+        .service-list li strong {
+            color: #1e40af;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.05em;
+        }
+        
+        .service-list li br {
+            line-height: 1.4;
+        }
+        
+        /* Platform Section */
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
+        }
+        
+        .platform-item {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid #FF6B35;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .platform-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+        
+        .platform-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+        }
+        
+        .platform-icon svg {
+            width: 35px;
+            height: 35px;
+            stroke: white;
+            fill: none;
+            stroke-width: 2.5;
+        }
+        
+        .platform-item h3 {
+            color: #1e40af;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        
+        .platform-item p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+        
+        /* Why Now Section */
+        .why-now-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .why-now-content p {
+            margin-bottom: 28px;
+            font-size: 1.2em;
+            line-height: 1.9;
+            color: #374151;
+        }
+        
+        .why-now-content strong {
+            color: #FF6B35;
+            font-weight: 700;
+        }
+        
+        .urgency-callout {
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A28 100%);
+            color: white;
+            padding: 40px 50px;
+            margin: 40px 0 0;
+            font-size: 1.8em;
+            font-weight: 900;
+            text-align: center;
+            border-radius: 12px;
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3);
+            text-transform: uppercase;
+        }
+        
+        /* Press Section */
+        .press-feature {
+            background: linear-gradient(to right, #eff6ff, white);
+            border-left: 6px solid #3b82f6;
+            padding: 45px;
+            margin: 50px auto;
+            max-width: 900px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            border-radius: 16px;
+        }
+        
+        .press-label {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .press-feature h3 {
+            color: #1e40af;
+            font-size: 2em;
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .press-feature .publication {
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+        
+        .press-feature p {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #3b82f6;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.05em;
+            transition: all 0.3s;
+        }
+        
+        .read-more:hover {
+            gap: 12px;
+            color: #1e40af;
+        }
+        
+        .read-more::after {
+            content: '→';
+            font-size: 1.2em;
+        }
+        
+        /* Donate Section */
+        .donate-section {
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A28 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .donate-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .donate-section h2 {
+            color: white;
+            font-size: 3.5em;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .donate-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .donate-content p {
+            font-size: 1.3em;
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+        
+        .donate-info {
+            background: rgba(255,255,255,0.15);
+            padding: 35px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .donate-info p {
+            margin-bottom: 15px;
+        }
+        
+        .donate-amount {
+            font-size: 4em;
+            font-weight: 900;
+            margin: 20px 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .footer-content p {
+            margin: 12px 0;
+            font-size: 1.05em;
+        }
+        
+        .social-links {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 24px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            border-color: #FF6B35;
+            background: #FF6B35;
+        }
+        
+        .footer-disclaimer {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+        
+        /* Email Signup */
+        .email-signup-box {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .email-form {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .email-form input {
+            padding: 18px 20px;
+            font-size: 1.05em;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+        
+        .email-form input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .email-form button {
+            width: auto;
+            padding: 18px 50px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero .tagline {
+                font-size: 1.5em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .platform-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .credibility-banner {
+                margin: -40px 20px 0;
+            }
+            
+            section h2 {
+                font-size: 2.2em;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .why-now-content,
+            .press-feature {
+                padding: 30px;
+            }
+            
+            .pull-quote {
+                font-size: 1.2em;
+                padding: 25px 30px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .donate-amount {
+                font-size: 3em;
+            }
+            
+            .urgency-callout {
+                font-size: 1.3em;
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <!-- Logo placeholder - replace src with actual logo file -->
+                    <img src="logo-placeholder.png" alt="Aaron Wesolowski for Ward 3" style="height: 50px; display: none;" id="campaign-logo">
+                    <span id="logo-text">AARON WESOLOWSKI • WARD 3</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#platform">Platform</a></li>
+                    <li><a href="#press">Press</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Parents Deserve<br>A Voice</h1>
+                <p class="tagline">Aaron Wesolowski for Board of Education</p>
+                <p class="subtitle">Running to bring accountability, high standards, and real parent representation to Ward 3's schools</p>
+                <div class="cta-buttons">
+                    <a href="#about" class="cta-button">Learn More</a>
+                    <a href="#donate" class="cta-button secondary">Support This Campaign</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Credibility Banner -->
+    <div class="container">
+        <div class="credibility-banner">
+            <h3>✦ Proven Education Advocate</h3>
+            <p>Aaron's op-ed on maintaining high standards in DC schools struck a nerve with parents citywide. His fight to keep full-length novels in middle school English sparked a movement for accountability. <a href="https://51st.news/opinion-dcps-middle-schoolers-should-be-reading-novels/" target="_blank">Read his story in The 51st →</a></p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Aaron</h2>
+            <div class="about-content">
+                <div class="profile-photo">
+                    [Replace with Aaron's photo - ideally outdoor setting at school/playground, casual but professional, warm expression]
+                </div>
+                <div class="bio">
+                    <p>I've tried to live my life and build my career around service. In my professional career, I've worked in government and advocacy to expand access to health care coverage. Before that I served as a Peace Corps Volunteer in Mali, West Africa, where I did everything from help dig wells to teach at the local high school—in a classroom of over fifty students.</p>
+                    
+                    <p>Now I'm the proud father of two Washington, DC natives who go to public schools, which is why I'm running for DC State Board of Education Representative from Ward 3—so that parents have a voice who will speak up for them demanding excellence and accountability in DC schools.</p>
+                    
+                    <div class="pull-quote">
+                        "My parents didn't just tell me education was important—they showed me."
+                    </div>
+                    
+                    <p>I am who I am today because of the values my parents instilled in me growing up and the value they placed on education, both in school and out in the world. In our house, we read books, we talked about what was happening in the world and in our community, we learned about where our family came from and the struggles they had to overcome. And my parents showed up—helping me with my homework, chaperoning field trips, volunteering in school.</p>
+                    
+                    <p>My wife and I have tried to carry that forward with our kids. We value reading. We volunteer, whether it's chaperoning field trips, working fundraising events, serving on the elementary school aftercare program board, or serving on the middle school parent advisory team. We show up for our kids and for our schools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Service Section -->
+    <section id="service" class="section-alt">
+        <div class="container">
+            <h2>Track Record of Service</h2>
+            <p class="section-intro">Aaron has been actively engaged in education and community service throughout his life—from the Peace Corps to school board rooms.</p>
+            
+            <div class="service-grid">
+                <div class="service-column">
+                    <h3>Education Leadership</h3>
+                    <ul class="service-list">
+                        <li><strong>Member, Local School Advisory Team (LSAT)</strong><br>Current middle school parent representative</li>
+                        <li><strong>Board Member & Treasurer</strong><br>Janney Elementary Aftercare Program (3 years)<br>Oversaw $3 million annual budget</li>
+                        <li><strong>Youth Coach</strong><br>Little League and youth soccer programs</li>
+                    </ul>
+                </div>
+                
+                <div class="service-column">
+                    <h3>Professional Experience</h3>
+                    <ul class="service-list">
+                        <li><strong>Health Care Policy & Advocacy</strong><br>Expanding access to health care coverage</li>
+                        <li><strong>Peace Corps Volunteer</strong><br>Mali, West Africa<br>Community development and education</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Section -->
+    <section id="platform" class="section-alt">
+        <div class="container">
+            <h2>What I Stand For</h2>
+            <p class="section-intro">Parents need a representative who will fight for accountability, maintain high standards, and ensure families have a real voice in their children's education.</p>
+            <div class="platform-grid">
+                <div class="platform-item">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                        </svg>
+                    </div>
+                    <h3>Accountability</h3>
+                    <p>Schools must be accountable to parents and families. That means transparency in decision-making, responsiveness to concerns, and clear communication about what's happening in our kids' classrooms before changes are made.</p>
+                </div>
+                <div class="platform-item">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path>
+                            <line x1="10" y1="8" x2="16" y2="8"></line>
+                            <line x1="10" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>High Academic Standards</h3>
+                    <p>We cannot shortchange our children's education with experiments that abandon proven fundamentals. Kids need to read full books, master core subjects, and be challenged to reach their full potential—not given shortcuts.</p>
+                </div>
+                <div class="platform-item">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 010 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Parent Voice</h3>
+                    <p>Parents are essential stakeholders in education. Schools must consult with parents on major changes, respond to concerns, and treat families as true partners in their children's learning—not as an afterthought.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Now Section -->
+    <section id="why-now">
+        <div class="container">
+            <h2>Why Now?</h2>
+            <div class="why-now-content">
+                <p>Parents being involved—and having their voice heard—in education is more important now than ever. The very nature of how kids learn to read and write and do math is changing before our eyes. Whether it's cellphones or social media or AI or even an experimental new curriculum that removes reading full books, there are so many outside factors influencing how our kids will learn and develop—not to mention coming out of the educational setbacks during the pandemic.</p>
+                
+                <p>Parents need a voice in education that demands maintaining a high bar, that pushes back on shortcuts that only shortchange learning, that doesn't abandon the fundamentals of learning in favor of flashy and proprietary experiments.</p>
+                
+                <p>We've had a Board of Education representative for the last three years who hasn't listened to parents, doesn't send his kids to DC public schools, and who only ran for this position as a consolation prize after losing a city council race.</p>
+                
+                <div class="urgency-callout">
+                    WE CAN'T GO ANOTHER FOUR YEARS WITHOUT A PARENT-ADVOCATE REPRESENTING OUR WARD
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Section -->
+    <section id="press" class="section-alt">
+        <div class="container">
+            <h2>In the News</h2>
+            <div class="press-feature">
+                <span class="press-label">Featured Op-Ed</span>
+                <h3>DCPS Middle Schoolers Should Be Reading Novels</h3>
+                <p class="publication">The 51st • Opinion</p>
+                <p>When Aaron discovered his daughter's middle school had quietly removed all full-length novels from 8th grade English without consulting parents, he didn't stay silent. His op-ed sparked citywide conversations about maintaining high standards and parent engagement in educational decisions.</p>
+                <a href="https://51st.news/opinion-dcps-middle-schoolers-should-be-reading-novels/" target="_blank" class="read-more">Read the Full Op-Ed</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="donate-section">
+        <div class="container">
+            <h2>Support This Campaign</h2>
+            <div class="donate-content">
+                <p>I'm running on DC's public financing program. Every donation from a DC voter is matched with public funds.</p>
+                
+                <div class="donate-info">
+                    <div class="donate-amount">$20</div>
+                    <p><strong>Your $20 donation gets matched with public funds</strong></p>
+                    <p>Your support helps ensure parents have a voice on the Board of Education who will fight for accountability and high standards.</p>
+                </div>
+                
+                <a href="#" class="cta-button secondary" style="font-size: 1.3em; padding: 22px 50px;">Donate Now</a>
+                <p style="margin-top: 25px; font-size: 1em; opacity: 0.9;">Donation link coming soon • Campaign filing deadline: Early March 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Signup Section -->
+    <section id="signup" style="background: #f8fafc; padding: 80px 0;">
+        <div class="container">
+            <div class="email-signup-box">
+                <h2 style="color: #1e3a8a; font-size: 2.5em; margin-bottom: 15px;">Stay Connected</h2>
+                <p style="font-size: 1.25em; color: #4b5563; margin-bottom: 35px; max-width: 700px; margin-left: auto; margin-right: auto;">Join Aaron's campaign to get updates on events, volunteer opportunities, and when our donation page launches.</p>
+                
+                <form class="email-form" action="#" method="post">
+                    <div class="form-row">
+                        <input type="text" name="first_name" placeholder="First Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="text" name="zip" placeholder="Zip Code" required>
+                    </div>
+                    <button type="submit" class="cta-button" style="margin-top: 20px;">Get Campaign Updates</button>
+                </form>
+                
+                <p style="margin-top: 25px; font-size: 0.9em; color: #6b7280; font-style: italic;">We'll never share your information. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p style="font-size: 1.3em; font-weight: 700; margin-bottom: 15px;">Aaron Wesolowski for DC Board of Education, Ward 3</p>
+                <p>Email: [Campaign Email]</p>
+            </div>
+            <div class="social-links">
+                <a href="https://bsky.app/profile/aaronweso.bsky.social" target="_blank">Bluesky</a>
+                <a href="#">Twitter/X</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+            <p class="footer-disclaimer">Paid for by Aaron Wesolowski for Board of Education</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
