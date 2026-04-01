@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aaron Wesolowski for DC Board of Education - Ward 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+line-height: 1.6;
+color: #1a1a1a;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 30px;
+}
+/* Header */
+header {
+background: #ffffff;
+color: #1a1a1a;
+padding: 20px 0;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+border-bottom: 3px solid #FF6B35;
+}
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+.logo {
+font-size: 1.4em;
+font-weight: 800;
+color: #1e40af;
+letter-spacing: -0.5px;
+}
+.nav-links {
+display: flex;
+gap: 35px;
+list-style: none;
+}
+.nav-links a {
+color: #1a1a1a;
+text-decoration: none;
+font-weight: 600;
+font-size: 0.95em;
+transition: color 0.3s;
+letter-spacing: 0.3px;
+}
+.nav-links a:hover {
+color: #FF6B35;
+}
+/* Hero Section */
+.hero {
+background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+color: white;
+padding: 100px 0 120px;
+position: relative;
+overflow: hidden;
+}
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+width: 50%;
+height: 100%;
+background: rgba(255,255,255,0.05);
+transform: skewX(-15deg);
+transform-origin: top;
+}
+.hero-content {
+position: relative;
+z-index: 2;
+display: grid;
+grid-template-columns: 1fr 380px;
+gap: 60px;
+align-items: center;
+}
+.hero-text {
+max-width: 600px;
+}
+.hero-photo {
+position: relative;
+z-index: 3;
+}
+.hero-photo img {
+width: 100%;
+height: auto;
+border-radius: 16px;
+box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+border: 4px solid white;
+}
+.hero h1 {
+font-size: 4.5em;
+margin-bottom: 20px;
+line-height: 1.1;
+font-weight: 900;
+letter-spacing: -2px;
+}
+.hero .tagline {
+font-size: 2em;
+margin-bottom: 20px;
+font-weight: 600;
+color: #ffffff;
+}
+.hero .subtitle {
+font-size: 1.3em;
+margin-bottom: 50px;
+opacity: 0.95;
+font-weight: 400;
+max-width: 700px;
+}
+.cta-buttons {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+}
+.cta-button {
+display: inline-block;
+background: #FF6B35;
+color: white;
+padding: 18px 45px;
+font-size: 1.15em;
+font-weight: 700;
+text-decoration: none;
+border-radius: 8px;
+transition: all 0.3s;
+box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+letter-spacing: 0.5px;
+}
+.cta-button:hover {
+background: #E55A28;
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+}
+.cta-button.secondary {
+background: white;
+color: #1e40af;
+box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+}
+.cta-button.secondary:hover {
+background: #f0f9ff;
+color: #1e40af;
+}
+/* Credibility Banner */
+.credibility-banner {
+background: #FFF4ED;
+border-left: 6px solid #FF6B35;
+padding: 30px;
+margin: -60px auto 0;
+max-width: 1000px;
+position: relative;
+z-index: 10;
+border-radius: 12px;
+box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+.credibility-banner h3 {
+color: #C2410C;
+font-size: 1.4em;
+margin-bottom: 10px;
+font-weight: 700;
+}
+.credibility-banner p {
+color: #9A3412;
+font-size: 1.05em;
+line-height: 1.6;
+margin-bottom: 8px;
+}
+.credibility-banner p:last-child {
+margin-bottom: 0;
+}
+.credibility-banner a {
+color: #C2410C;
+font-weight: 700;
+text-decoration: none;
+border-bottom: 2px solid #FF6B35;
+}
+/* Section Styling */
+section {
+padding: 90px 0;
+}
+section h2 {
+font-size: 3em;
+margin-bottom: 20px;
+color: #1e40af;
+font-weight: 800;
+letter-spacing: -1px;
+}
+.section-intro {
+font-size: 1.25em;
+color: #4b5563;
+max-width: 800px;
+margin: 0 auto 60px;
+line-height: 1.7;
+}
+.section-alt {
+background: #f8fafc;
+}
+/* About Section */
+.about-content {
+display: grid;
+grid-template-columns: 350px 1fr;
+gap: 60px;
+align-items: start;
+}
+.profile-photo-placeholder {
+width: 100%;
+height: 400px;
+}
+.bio p {
+margin-bottom: 24px;
+font-size: 1.15em;
+line-height: 1.8;
+color: #374151;
+}
+.bio p:last-child {
+margin-bottom: 0;
+}
+/* Governance Section */
+.governance-content {
+max-width: 900px;
+margin: 0 auto;
+background: white;
+padding: 50px;
+border-radius: 16px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.governance-content p {
+margin-bottom: 28px;
+font-size: 1.15em;
+line-height: 1.9;
+color: #374151;
+}
+.governance-content p:last-child {
+margin-bottom: 0;
+}
+/* Platform Section */
+.platform-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+gap: 35px;
+margin-top: 60px;
+}
+.platform-item {
+background: white;
+padding: 40px;
+border-radius: 16px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+border-top: 5px solid #FF6B35;
+transition: all 0.3s;
+position: relative;
+}
+.platform-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+.platform-icon {
+width: 70px;
+height: 70px;
+background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+border-radius: 16px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 25px;
+box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+}
+.platform-icon svg {
+width: 35px;
+height: 35px;
+stroke: white;
+fill: none;
+stroke-width: 2.5;
+}
+.platform-item h3 {
+color: #1e40af;
+font-size: 1.6em;
+margin-bottom: 18px;
+font-weight: 700;
+}
+.platform-item p {
+font-size: 1.1em;
+line-height: 1.8;
+color: #4b5563;
+}
+/* Why Now Section */
+.why-now-content {
+max-width: 900px;
+margin: 0 auto;
+background: white;
+padding: 50px;
+border-radius: 16px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.why-now-content p {
+margin-bottom: 28px;
+font-size: 1.2em;
+line-height: 1.9;
+color: #374151;
+}
+.why-now-content p:last-child {
+margin-bottom: 0;
+}
+/* Press Section */
+.press-feature {
+background: linear-gradient(to right, #eff6ff, white);
+border-left: 6px solid #3b82f6;
+padding: 45px;
+margin: 50px auto;
+max-width: 900px;
+box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+border-radius: 16px;
+}
+.press-label {
+display: inline-block;
+background: #3b82f6;
+color: white;
+padding: 8px 20px;
+border-radius: 20px;
+font-size: 0.85em;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
+.press-feature h3 {
+color: #1e40af;
+font-size: 2em;
+margin-bottom: 12px;
+font-weight: 700;
+line-height: 1.3;
+}
+.press-feature .publication {
+color: #6b7280;
+font-style: italic;
+margin-bottom: 20px;
+font-size: 1.05em;
+}
+.press-feature p {
+font-size: 1.15em;
+margin-bottom: 25px;
+line-height: 1.7;
+color: #4b5563;
+}
+.read-more {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+color: #3b82f6;
+font-weight: 700;
+text-decoration: none;
+font-size: 1.05em;
+transition: all 0.3s;
+}
+.read-more:hover {
+gap: 12px;
+color: #1e40af;
+}
+.read-more::after {
+content: '→';
+font-size: 1.2em;
+}
+/* Donate Section */
+.donate-section {
+background: linear-gradient(135deg, #FF6B35 0%, #E55A28 100%);
+color: white;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.donate-section::before {
+content: '';
+position: absolute;
+top: -50%;
+right: -10%;
+width: 500px;
+height: 500px;
+background: rgba(255,255,255,0.1);
+border-radius: 50%;
+}
+.donate-section h2 {
+color: white;
+font-size: 3.5em;
+position: relative;
+z-index: 2;
+}
+.donate-content {
+max-width: 800px;
+margin: 0 auto;
+position: relative;
+z-index: 2;
+}
+.donate-content p {
+font-size: 1.3em;
+margin-bottom: 35px;
+line-height: 1.7;
+}
+.donate-info {
+background: rgba(255,255,255,0.15);
+padding: 35px;
+border-radius: 16px;
+margin-bottom: 40px;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(255,255,255,0.2);
+}
+.donate-info p {
+margin-bottom: 15px;
+}
+.donate-amount {
+font-size: 4em;
+font-weight: 900;
+margin: 20px 0;
+text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+/* Footer */
+footer {
+background: #0f172a;
+color: white;
+padding: 60px 0 30px;
+}
+.footer-content {
+text-align: center;
+margin-bottom: 30px;
+}
+.footer-content p {
+margin: 12px 0;
+font-size: 1.05em;
+}
+.social-links {
+margin: 30px 0;
+display: flex;
+justify-content: center;
+gap: 25px;
+}
+.social-links a {
+color: white;
+text-decoration: none;
+font-weight: 600;
+padding: 12px 24px;
+border: 2px solid rgba(255,255,255,0.2);
+border-radius: 8px;
+transition: all 0.3s;
+}
+.social-links a:hover {
+border-color: #FF6B35;
+background: #FF6B35;
+}
+.footer-disclaimer {
+margin-top: 40px;
+padding-top: 30px;
+border-top: 1px solid rgba(255,255,255,0.1);
+font-size: 0.9em;
+opacity: 0.7;
+}
+/* Email Signup */
+.email-signup-box {
+max-width: 900px;
+margin: 0 auto;
+text-align: center;
+}
+.email-form {
+max-width: 800px;
+margin: 0 auto;
+}
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+margin-bottom: 15px;
+}
+.email-form input[name="entry.1132865589"] {
+grid-column: 1 / -1;
+}
+.email-form input[name="entry.1207054992"] {
+grid-column: 1 / -1;
+max-width: 300px;
+margin: 0 auto;
+}
+.email-form input {
+padding: 18px 20px;
+font-size: 1.05em;
+border: 2px solid #e5e7eb;
+border-radius: 8px;
+transition: all 0.3s;
+font-family: inherit;
+}
+.email-form input:focus {
+outline: none;
+border-color: #3b82f6;
+box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+.email-form button {
+width: auto;
+padding: 18px 50px;
+cursor: pointer;
+border: none;
+}
+/* Responsive */
+@media (max-width: 768px) {
+.hero {
+padding: 60px 0 80px;
+}
+.hero-content {
+grid-template-columns: 1fr;
+gap: 40px;
+}
+.hero-photo {
+order: -1;
+max-width: 300px;
+margin: 0 auto;
+}
+.hero h1 {
+font-size: 2.5em;
+}
+.hero .tagline {
+font-size: 1.5em;
+}
+.hero .subtitle {
+font-size: 1.1em;
+}
+.about-content {
+grid-template-columns: 1fr;
+}
+.profile-photo-placeholder {
+display: none;
+}
+.nav-links {
+display: none;
+}
+.platform-grid {
+grid-template-columns: 1fr;
+}
+.credibility-banner {
+margin: -40px 20px 0;
+}
+section h2 {
+font-size: 2.2em;
+}
+.cta-buttons {
+flex-direction: column;
+}
+.why-now-content,
+.governance-content,
+.press-feature {
+padding: 30px;
+}
+.form-row {
+grid-template-columns: 1fr;
+}
+.donate-amount {
+font-size: 3em;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+<div class="container">
+<nav>
+<div class="logo">
+<img src="logo-placeholder.png" alt="Aaron Wesolowski for Ward 3" style="height: 50px; display: none;" id="campaign-logo">
+<span id="logo-text">AARON WESOLOWSKI • WARD 3</span>
+</div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#platform">Platform</a></li>
+<li><a href="#press">Press</a></li>
+<li><a href="#donate">Donate</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="hero-text">
+<h1>Parents Deserve<br>A Voice</h1>
+<p class="tagline">Aaron Wesolowski for Board of Education</p>
+<p class="subtitle">Running for accountability, high standards, and community, family, and teacher engagement in Ward 3</p>
+<div class="cta-buttons">
+<a href="#about" class="cta-button">Learn More</a>
+<a href="#donate" class="cta-button secondary">Support This Campaign</a>
+</div>
+</div>
+<div class="hero-photo">
+<img src="aaron-headshot.jpg" alt="Aaron Wesolowski">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Credibility Banner -->
+<div class="container">
+<div class="credibility-banner">
+<h3>✦ Proven Education Advocate</h3>
+<p>Aaron's op-ed on maintaining high standards in DC schools struck a nerve. His fight to keep full-length novels in middle school English sparked a conversation about learning fundamentals and transparency. <a href="https://51st.news/opinion-dcps-middle-schoolers-should-be-reading-novels/" target="_blank">Read his op-ed in The 51st →</a></p>
+<p>Read Aaron's testimony to the City Council about reading books in schools and parents having a voice in education. <a href="#" target="_blank">Read the testimony →</a></p>
+</div>
+</div>
+
+<!-- About Section -->
+<section id="about">
+<div class="container">
+<h2>About Aaron</h2>
+<div class="about-content">
+<div class="profile-photo-placeholder"></div>
+<div class="bio">
+<p>As an AU Park resident and a DC public school parent, I've seen firsthand how our community is served by our public schools. I've built my career around that same sense of service. Professionally, I've worked in government, research, and advocacy to expand healthcare access, including helping to build the Health Insurance Marketplace during implementation of the Affordable Care Act. My commitment to service began even earlier in Mali, West Africa, where I served as a Community Health Peace Corps Volunteer and met my wife, Meg. There I did everything from dig wells to organize an annual HIV-awareness basketball tournament and teach in a local high school.</p>
+<p>These experiences shaped my belief that public institutions are at their best when they are accessible, accountable, and rooted in the community. As the son of a retired public school teacher and a product of public education, I view strong neighborhood schools as more than just buildings: they are often the heart of our communities.</p>
+<p>Today, I am the father of two DC natives attending public schools in Ward 3. My belief in the power of public education has driven me to be an engaged and active parent. I have served on the Local School Advisory Team (LSAT) at Alice Deal Middle School, served as the treasurer on the board of our elementary school's parent-run aftercare and enrichment program, and volunteered and coached my kids' sports teams.</p>
+<p>During our time in DC schools, our children have been taught by extremely talented, deeply committed educators. However, we have also encountered challenges that required us to advocate fiercely for our kids. We've seen the DC Public Schools (DCPS) administration fall short when it comes to accountability and responding to parent concerns or even keeping parents informed. Those experiences are why I'm running to be the Ward 3 representative to the DC State Board of Education. I believe we deserve a representative who listens to the community, speaks up for them, and consistently advocates for excellence and accountability for every public school in DC.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Governance Explainer Section -->
+<section id="governance" class="section-alt">
+<div class="container">
+<h2>How Are Our Public Schools Managed and What Is the DC State Board of Education?</h2>
+<div class="governance-content">
+<p>In 2007, DC shifted to mayoral control of schools to address decades of challenges with school administration and underperformance. Under this model, the Mayor has direct responsibility for the school system and appoints the leaders of the major education agencies. This includes the Chancellor of DCPS and the State Superintendent, who handles federal funding and citywide standards for all public schools, including public charter schools. The Deputy Mayor for Education coordinates across these different agencies, while other agencies like the Department of Health manage specific services, like school nursing.</p>
+<p>The DC City Council also plays a major role through its power over the city budget and its ability to pass new laws. While the Mayor manages the day-to-day operations, the Council holds oversight hearings to check on the performance of education agencies and must approve the funding that schools receive each year. This gives the Council a level of authority over the system's finances and legal framework that other bodies do not have. However, the Council has no standing education committee, with education issues going through the Committee of the Whole.</p>
+<p>The State Board of Education is the only elected part of this system specifically dedicated to education, but its actual power is extremely limited. Board members are part-time and rely on limited board staff. While the Board approves certain high-level rules like graduation requirements and academic standards, it does not have the authority to set school budgets, choose specific curricula, or make education leadership staffing decisions. Because the Mayor controls the funding and the leadership of the school system, the Board serves as a voice for community members rather than a body with management power. In the larger DC education system, the Board in its current form acts as a bridge between the community and city officials, even though the Mayor's office has the final word on how schools are operated day-to-day.</p>
+<p>Even though the Board lacks much formal authority, it can still be an important platform. Board members are in a unique position to be a voice for community members, raising concerns and questions to school leaders, and to make sure community members are aware of what's happening across the school system. Being able to accomplish both those priorities depends heavily on being able to establish and maintain strong relationships with staff in the Deputy Mayor's office, OSSE, and DCPS; City Councilmembers; other Board members; school leaders; educators; and parents.</p>
+</div>
+</div>
+</section>
+
+<!-- Platform Section -->
+<section id="platform">
+<div class="container">
+<h2>What I Stand For</h2>
+<p class="section-intro">Parents and families deserve a representative who will advocate for accountability, high standards, and a genuine voice in their children's education.</p>
+<div class="platform-grid">
+
+<div class="platform-item">
+<div class="platform-icon">
+<svg viewBox="0 0 24 24">
+<path d="M9 11l3 3L22 4"></path>
+<path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+</svg>
+</div>
+<h3>Accountability</h3>
+<p>Parents and families need accountability from our schools and the city power structures that oversee public education in DC. That means transparency in decision-making, responsiveness to concerns, clear communication about what's happening in our kids' classrooms before changes are made, and the ability to provide meaningful feedback that informs decision-making. It also means ensuring that DC schools fulfill their obligation to provide all students, especially those with special needs, the services and supports to which they are entitled. I will advocate for the Council to establish a standing education committee and to expand oversight authority of schools to the State Board of Education, along with the resources necessary to conduct that oversight.</p>
+</div>
+
+<div class="platform-item">
+<div class="platform-icon">
+<svg viewBox="0 0 24 24">
+<path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path>
+<path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path>
+<line x1="10" y1="8" x2="16" y2="8"></line>
+<line x1="10" y1="12" x2="16" y2="12"></line>
+</svg>
+</div>
+<h3>High Academic Standards</h3>
+<p>We can't shortcut our children's education. We need to pursue innovation and new approaches while recognizing that some fundamentals of learning work. As part of this, strong DCPS neighborhood schools must remain the cornerstones of our communities. Across all public schools in DC, I support kids reading full books, mastering core subjects, and being challenged to reach their full potential.</p>
+</div>
+
+<div class="platform-item">
+<div class="platform-icon">
+<svg viewBox="0 0 24 24">
+<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+<path d="M16 3.13a4 4 0 010 7.75"></path>
+</svg>
+</div>
+<h3>A Voice for Communities</h3>
+<p>In addition to having a venue to advocate for their own children, families deserve someone who listens to them, speaks up for their children and schools, and communicates back to them about what's happening in the broader DC education community. That means having a Ward 3 representative committed to building and maintaining productive relationships with LSATs, PTAs/PTOs, parents, teachers, administrators, and other elected officials around the city. I will send regular Ward 3 newsletters highlighting what is happening on the Board, as well as what's happening in schools in Ward 3 and across the city. I will also meet regularly with parents and community members at Ward 3 events and in virtual and in-person office hours.</p>
+</div>
+
+<div class="platform-item">
+<div class="platform-icon">
+<svg viewBox="0 0 24 24">
+<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+<line x1="8" y1="21" x2="16" y2="21"></line>
+<line x1="12" y1="17" x2="12" y2="21"></line>
+</svg>
+</div>
+<h3>Education Technology, Screen Time, and AI</h3>
+<p>DC took a necessary first step when it banned personal devices in schools. Despite that, families have noticed an explosion in the use of educational technology and screen time both in school and at home for schoolwork. Educational technology isn't inherently bad, as long as it's used strategically and intentionally as a tool to supplement teaching and is evaluated for effectiveness rigorously before and after adoption. Similarly, AI must be treated as a tool that can free up time for teachers and supplement student learning, while not undermining their development of basic skills, like reading, writing, and math. I support assessing how much screen time students are getting in school or at home for schoolwork; regularly evaluating whether educational websites, applications, and tools are effective; and ensuring students aren't inadvertently being exposed to inappropriate or non-educational content in school or on school devices. I also support establishing a dedicated AI specialist role within the State Board of Education to develop a policy and training framework for AI integration in DC schools that prioritizes student safety, data privacy, academic integrity, and AI literacy for students, teachers, and parents. In all of this, families need to have a meaningful say in how educational technology and AI are used in schools and by students.</p>
+</div>
+
+<div class="platform-item">
+<div class="platform-icon">
+<svg viewBox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+<line x1="12" y1="8" x2="12" y2="16"></line>
+<line x1="8" y1="12" x2="16" y2="12"></line>
+</svg>
+</div>
+<h3>School Health &amp; Safety</h3>
+<p>I believe in having one nurse per school who knows the students and community. The District has moved away from that to a "cluster" model that puts a nurse in the position of overseeing the health of students across multiple schools, in theory supervising health technicians who are on-site. In reality, the system has resulted in poor nursing retention and inadequate staffing of both nurses and health technicians. School nurses provide a critical safety net for all students by managing everyday health needs and acute injuries. We need a system that ensures students are safe and focused on learning, particularly those with specific medical requirements such as severe allergies or those who need assistance with medication. I support returning to one full-time nurse in every school. Until that is achieved, I support refining the cluster model, with the input of nurses, so that it ensures consistent access to highly trained professionals, provides appropriate clinical supervision, and operates in a manner designed to attract and retain experienced nursing staff.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Why Now Section -->
+<section id="why-now" class="section-alt">
+<div class="container">
+<h2>Why Now?</h2>
+<div class="why-now-content">
+<p>The way our children learn is changing rapidly. From the influence of new technologies to shifting approaches in the classroom, our students are at a critical pivot point. Our community needs an advocate at the table to ensure parent, family, and teacher voices are heard.</p>
+<p>That advocacy is particularly urgent because DC is on the cusp of a historic transition. With two new At-Large Councilmembers, our first new Congressional Delegate since 1991, and a new Mayor for the first time in 12 years, our city government is about to undergo a massive shift. This change in leadership will likely bring a cascade of other changes in school administration, representing a generational opportunity to reset our expectations. Now is the time to demand that city leaders prioritize high standards, intentional use of technology, and genuine community and family engagement in our public schools.</p>
+<p>It will be critical to have a parent and community advocate representing Ward 3 on the State Board of Education.</p>
+</div>
+</div>
+</section>
+
+<!-- Press Section -->
+<section id="press">
+<div class="container">
+<h2>In the News</h2>
+<div class="press-feature">
+<span class="press-label">Featured Op-Ed</span>
+<h3>DCPS Middle Schoolers Should Be Reading Novels</h3>
+<p class="publication">The 51st • Opinion</p>
+<p>When Aaron discovered his daughter's middle school had quietly removed all full-length novels from 8th grade English without consulting parents, he didn't stay silent. His op-ed sparked citywide conversations about maintaining high standards and parent engagement in educational decisions.</p>
+<a href="https://51st.news/opinion-dcps-middle-schoolers-should-be-reading-novels/" target="_blank" class="read-more">Read the Full Op-Ed</a>
+</div>
+</div>
+</section>
+
+<!-- Donate Section -->
+<section id="donate" class="donate-section">
+<div class="container">
+<h2>Support This Campaign</h2>
+<div class="donate-content">
+<p>I plan to participate in the DC Fair Election Program, which matches every donation from a DC voter with public funds.</p>
+<div class="donate-info">
+<div class="donate-amount">$20</div>
+<p><strong>Once I qualify for the Fair Election Program, your $20 donation will be matched with public funds.</strong></p>
+<p>Your support helps ensure parents and families have a voice on the Board of Education that fights for accountability and high standards.</p>
+</div>
+<a href="#" class="cta-button secondary" style="font-size: 1.3em; padding: 22px 50px;">Donate Now</a>
+<p style="margin-top: 25px; font-size: 1em; opacity: 0.9;">Donation link coming soon • Campaign filing deadline: Early March 2026</p>
+</div>
+</div>
+</section>
+
+<!-- Email Signup Section -->
+<section id="signup" style="background: #f8fafc; padding: 80px 0;">
+<div class="container">
+<div class="email-signup-box">
+<h2 style="color: #1e3a8a; font-size: 2.5em; margin-bottom: 15px;">Stay Connected</h2>
+<p style="font-size: 1.25em; color: #4b5563; margin-bottom: 35px; max-width: 700px; margin-left: auto; margin-right: auto;">Join Aaron's campaign to get updates on events, volunteer opportunities, and when our donation page launches.</p>
+<form class="email-form" id="email-signup-form">
+<div class="form-row">
+<input type="text" name="entry.2044997625" placeholder="First Name" required>
+<input type="text" name="entry.1220450612" placeholder="Last Name" required>
+<input type="email" name="entry.1132865589" placeholder="Email Address" required>
+<input type="text" name="entry.1207054992" placeholder="Zip Code">
+</div>
+<button type="submit" class="cta-button" style="margin-top: 20px;">Get Campaign Updates</button>
+<p id="form-message" style="margin-top: 20px; font-weight: 600; display: none;"></p>
+</form>
+<script>
+document.getElementById('email-signup-form').addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(this);
+const button = this.querySelector('button');
+const message = document.getElementById('form-message');
+button.disabled = true;
+button.textContent = 'Signing up...';
+fetch('https://docs.google.com/forms/d/e/1FAIpQLSdXTfYNK8PNgFBzRq7Nej5LD9t_5kFZN45juFda_WQ9FCZ1vw/formResponse', {
+method: 'POST',
+mode: 'no-cors',
+body: formData
+}).then(() => {
+message.style.display = 'block';
+message.style.color = '#16a34a';
+message.textContent = '✓ Thanks for signing up!';
+this.reset();
+button.disabled = false;
+button.textContent = 'Get Campaign Updates';
+setTimeout(() => { message.style.display = 'none'; }, 5000);
+}).catch(() => {
+message.style.display = 'block';
+message.style.color = '#dc2626';
+message.textContent = 'Something went wrong. Please try again.';
+button.disabled = false;
+button.textContent = 'Get Campaign Updates';
+});
+});
+</script>
+<p style="margin-top: 25px; font-size: 0.9em; color: #6b7280; font-style: italic;">We'll never share your information. Unsubscribe anytime.</p>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<p style="font-size: 1.3em; font-weight: 700; margin-bottom: 15px;">Aaron Wesolowski for DC Board of Education, Ward 3</p>
+<p>Email: [Campaign Email]</p>
+</div>
+<div class="social-links">
+<a href="https://bsky.app/profile/aaronweso.bsky.social" target="_blank">Bluesky</a>
+<a href="#">Twitter/X</a>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+</div>
+<p class="footer-disclaimer">Paid for by Aaron Wesolowski for Board of Education</p>
+</div>
+</footer>
+
+</body>
+</html>
